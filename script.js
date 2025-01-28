@@ -56,13 +56,13 @@ function generatePDF() {
     // Add the hyperlink text manually with blue color and centered
     doc.setTextColor(0, 0, 255); // Set the text color to blue
     doc.setFontSize(16);
-    const linkText = 'Try For Yourself at TheInfinitePotato.com';
+    const linkText = 'Try For Yourself at https://infinite-potato.vercel.app/';
     const linkTextWidth = doc.getTextWidth(linkText);
     const linkTextX = (pageWidth - linkTextWidth) / 2;
     doc.text(linkText, linkTextX, imgHeight + 70);
 
     // Add the link manually
-    doc.link(linkTextX, imgHeight + 60, linkTextWidth, 10, { url: 'https://theinfinitepotato.com' });
+    doc.link(linkTextX, imgHeight + 60, linkTextWidth, 10, { url: 'https://infinite-potato.vercel.app/' });
 
     // Save the PDF
     doc.save('Infinite_Potato_Certificate.pdf');
